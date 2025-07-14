@@ -1,0 +1,87 @@
+/* app.css */
+
+/* Contenedor principal del sidenav */
+mat-sidenav-container {
+  height: 100vh; /* Altura completa de la ventana */
+  width: 100%;
+}
+
+/* Configuración del sidenav */
+mat-sidenav {
+  width: 250px;
+  padding: 20px;
+  height: 100%; /* Altura completa del contenedor */
+  overflow-y: auto; /* Scroll vertical si es necesario */
+  background-color: #130e0e;
+  border-right: 1px solid #141212;
+}
+
+/* Lista de navegación */
+mat-nav-list {
+  padding: 0;
+  width: 100%;
+}
+
+mat-nav-list a {
+  display: block !important;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 4px;
+  margin-bottom: 4px;
+  transition: background-color 0.3s ease;
+  min-height: 48px; /* Altura mínima para cada item */
+  line-height: 1.2;
+}
+
+mat-nav-list a:hover {
+  background-color: rgba(63, 81, 181, 0.1);
+}
+
+mat-nav-list a.active {
+  background-color: rgba(63, 81, 181, 0.2);
+  color: #3f51b5;
+  font-weight: 500;
+}
+
+/* Contenido principal */
+mat-sidenav-content {
+  padding: 20px;
+  height: 100vh; /* Altura completa */
+  overflow-y: auto; /* Scroll si el contenido es muy largo */
+}
+
+/* Toolbar */
+mat-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Asegurar que el body y html tengan altura completa */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Responsivo - en pantallas pequeñas */
+@media (max-width: 768px) {
+  mat-sidenav {
+    width: 200px;
+    padding: 15px;
+  }
+  
+  mat-nav-list a {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+}
+
+/* Asegurar que todos los elementos de la lista sean visibles */
+mat-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}

@@ -1,15 +1,31 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Angular2</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-</head>
-<body class="mat-typography">
-  <app-root></app-root>
-</body>
-</html>
+<div style="height: 100vh; display: flex; flex-direction: column;">
+  <mat-toolbar color="primary">
+    Mis componentes Angular Material
+  </mat-toolbar>
+
+  <mat-sidenav-container style="flex: 1;">
+    <mat-sidenav mode="side" opened>
+      <mat-nav-list>
+        <a mat-list-item routerLink="/sheet" routerLinkActive="active">Sheet</a>
+        <a mat-list-item routerLink="/chips" routerLinkActive="active">Chips</a>
+        <a mat-list-item routerLink="/cards" routerLinkActive="active">Cards</a>
+        <a mat-list-item routerLink="/autocomplete" routerLinkActive="active">Autocomplete</a>
+        <a mat-list-item routerLink="/button" routerLinkActive="active">Button</a>
+        <a mat-list-item routerLink="/toolbar" routerLinkActive="active">Toolbar</a>
+        <a mat-list-item routerLink="/tabla" routerLinkActive="active">Tabla</a>
+        <a mat-list-item routerLink="/check" routerLinkActive="active">Check</a>
+        <a mat-list-item routerLink="/progress" routerLinkActive="active">Progress</a>
+        <a mat-list-item routerLink="/divider" routerLinkActive="active">Divider</a>
+        <a mat-list-item routerLink="/panel" routerLinkActive="active">Panel</a>
+        <a mat-list-item routerLink="/calendario" routerLinkActive="active">Calendario</a>
+        <a mat-list-item routerLink="/slider" routerLinkActive="active">Slider</a>
+        <a mat-list-item routerLink="/menu" routerLinkActive="active">Menu</a>
+        <a mat-list-item routerLink="/tree" routerLinkActive="active">Tree</a>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
